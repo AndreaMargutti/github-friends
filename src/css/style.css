@@ -13,6 +13,10 @@ body {
     font-family: 'Silkscreen';
 }
 
+img {
+    height: 30vh;
+}
+
 /* utilities */
 
 .container {
