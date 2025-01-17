@@ -38,11 +38,12 @@ img {
 
 /* # Input Section */
 
-#search-box {
-    height: 5rem;
+.box {
+    min-height: 5rem;
     background-image: radial-gradient(circle, #a4b9f0, #c8b5e6, #e0b5d7, #ebb8c7, #ecbfbd);
     border-radius: 24px;
     box-shadow: 5px 5px 5px 1px #7012eb;
+    margin-bottom: 2rem;
 }
 
 #search-bar {
