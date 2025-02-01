@@ -57,6 +57,10 @@ img {
     display: none;
 }
 
+.d-block {
+    display: block;
+}
+
 /* # Input Section */
 
 .box {

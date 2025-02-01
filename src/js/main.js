@@ -20,6 +20,10 @@ function renderUserData(userData) {
     let userPic = document.createElement('img');
     userPic.classList.add('pt-2');
     userPic.src = userData.avatar_url;
+    const userLink = document.createElement('a');
+    userLink.classList.add('d-block', 'pt-2');
+    userLink.href = userData.html_url;
+    userLink.textContent = 'My GitHub Personal Page'
 
     //creo nodi di testo per location e repo
     const userLocation = document.createElement('h2');
@@ -32,10 +36,10 @@ function renderUserData(userData) {
     const userRepos = document.createElement('h3');
     userRepos.textContent = `Public Repository: ${userData.public_repos}`;
 
-
     //inserisco avatar e nome nel figure
     userInfo.appendChild(userName);
     userInfo.appendChild(userPic);
+    userInfo.appendChild(userLink);
     //inserisco tutto nel DOM
     resultContainer.appendChild(userInfo);
     resultContainer.appendChild(userLocation);
