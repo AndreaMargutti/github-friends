@@ -6,6 +6,7 @@ const resultContainer = document.getElementById('result');
 
 // funzione per renderizzare i dati dell'utente
 function renderUserData(userData) {
+    resultContainer.classList.remove('d-none');
     resultContainer.innerHTML = `
     <figure>
         <h1>${userData.login}</h1>

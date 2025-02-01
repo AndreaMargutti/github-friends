@@ -49,6 +49,10 @@ img {
     margin-bottom: 2rem;
 }
 
+.d-none {
+    display: none;
+}
+
 /* # Input Section */
 
 .box {
