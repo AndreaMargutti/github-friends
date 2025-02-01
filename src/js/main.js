@@ -7,13 +7,24 @@ const resultContainer = document.getElementById('result');
 // funzione per renderizzare i dati dell'utente
 function renderUserData(userData) {
     resultContainer.classList.remove('d-none');
-    resultContainer.innerHTML = `
-    <figure>
-        <h1>${userData.login}</h1>
-        <img src="${userData.avatar_url}" alt="profile_pic">
-    </figure>
-    <h2>${userData.location}</h2>
-    <h3>${userData.public_repos}</h3>`;
+
+    const userInfo = document.createElement('figure');
+    const userName = document.createElement('h1');
+    userName.textContent = userData.login;
+    let userPic = document.createElement('img');
+    userPic.src = userData.avatar_url;
+
+    const userLocation = document.createElement('h2');
+    userLocation.textContent = userData.location;
+    const userRepos = document.createElement('h3');
+    userRepos.textContent = `Public Repos: ${userData.public_repos}`;
+
+    userInfo.appendChild(userName);
+    userInfo.appendChild(userPic);
+    resultContainer.appendChild(userInfo);
+    resultContainer.appendChild(userLocation);
+    resultContainer.appendChild(userRepos);
+
 }
 
 inputForm.addEventListener('submit', function (e) {
