@@ -11,6 +11,7 @@ function renderUserData(userData) {
 
     //creo il figure con all'interno avatar e nome utente
     const userInfo = document.createElement('figure');
+    userInfo.classList.add('text-center');
     const userName = document.createElement('h1');
     userName.textContent = userData.login;
     let userPic = document.createElement('img');
@@ -18,6 +19,7 @@ function renderUserData(userData) {
 
     //creo nodi di testo per location e repo
     const userLocation = document.createElement('h2');
+    userLocation.classList.add('pt-2');
     userLocation.textContent = userData.location;
     const userRepos = document.createElement('h3');
     userRepos.textContent = `Repository Pubbliche: ${userData.public_repos}`;

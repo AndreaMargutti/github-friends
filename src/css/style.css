@@ -45,6 +45,10 @@ img {
     padding-top: 2rem;
 }
 
+.p-2 {
+    padding: 2rem
+}
+
 .mb-2 {
     margin-bottom: 2rem;
 }
