@@ -74,3 +74,15 @@ img {
     background-color: transparent;
     padding: 13px 4px;
 }
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: 5px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid blueviolet;
+    border-radius: 8px;
+}
