@@ -24,7 +24,11 @@ function renderUserData(userData) {
     //creo nodi di testo per location e repo
     const userLocation = document.createElement('h2');
     userLocation.classList.add('pt-2');
-    userLocation.textContent = `Location: ${userData.location}`;
+    if (!(userData.location === null)) {
+        userLocation.textContent = `Location: ${userData.location}`;
+    } else {
+        userLocation.textContent = `Location: not available`
+    }
     const userRepos = document.createElement('h3');
     userRepos.textContent = `Public Repository: ${userData.public_repos}`;
 
