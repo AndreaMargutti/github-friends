@@ -38,6 +38,19 @@ function renderUserData(userData) {
     resultContainer.appendChild(userRepos);
 }
 
+// funzione per renderizzare in pagina l'errore
+function renderError() {
+    resultContainer.innerHTML = '';
+    resultContainer.classList.remove('d-none');
+
+    const errorMessage = document.createElement('h1');
+    errorMessage.classList.add('text-center');
+    errorMessage.style.color = 'red';
+    errorMessage.textContent = 'Error 404: User not Found'
+
+    resultContainer.appendChild(errorMessage);
+}
+
 inputForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -53,5 +66,6 @@ inputForm.addEventListener('submit', function (e) {
         })
         .catch(function (error) {
             console.log(error);
+            renderError();
         });
 })
