@@ -6,25 +6,30 @@ const resultContainer = document.getElementById('result');
 
 // funzione per renderizzare i dati dell'utente
 function renderUserData(userData) {
+    // rendo visibile la sezione
     resultContainer.classList.remove('d-none');
 
+    //creo il figure con all'interno avatar e nome utente
     const userInfo = document.createElement('figure');
     const userName = document.createElement('h1');
     userName.textContent = userData.login;
     let userPic = document.createElement('img');
     userPic.src = userData.avatar_url;
 
+    //creo nodi di testo per location e repo
     const userLocation = document.createElement('h2');
     userLocation.textContent = userData.location;
     const userRepos = document.createElement('h3');
-    userRepos.textContent = `Public Repos: ${userData.public_repos}`;
+    userRepos.textContent = `Repository Pubbliche: ${userData.public_repos}`;
 
+
+    //inserisco avatar e nome nel figure
     userInfo.appendChild(userName);
     userInfo.appendChild(userPic);
+    //inserisco tutto nel DOM
     resultContainer.appendChild(userInfo);
     resultContainer.appendChild(userLocation);
     resultContainer.appendChild(userRepos);
-
 }
 
 inputForm.addEventListener('submit', function (e) {
