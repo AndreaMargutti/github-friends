@@ -47,12 +47,19 @@ function renderError() {
     resultContainer.innerHTML = '';
     resultContainer.classList.remove('d-none');
 
+    const errorDisplay = document.createElement('figure');
+    errorDisplay.classList.add('text-center');
     const errorMessage = document.createElement('h1');
     errorMessage.classList.add('text-center');
     errorMessage.style.color = 'red';
     errorMessage.textContent = 'Error 404: User not Found'
+    const errorImage = document.createElement('img');
+    errorImage.src = 'public/cute-astronaut-lost-space-404-cartoon-vector-icon-illustration-science-technology-isolated-flat_138676-7622.avif';
+    errorImage.classList.add('pt-2');
 
-    resultContainer.appendChild(errorMessage);
+    errorDisplay.appendChild(errorMessage);
+    errorDisplay.appendChild(errorImage);
+    resultContainer.appendChild(errorDisplay);
 }
 
 inputForm.addEventListener('submit', function (e) {
